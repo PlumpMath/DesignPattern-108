@@ -6,6 +6,6 @@ public interface ContactDAO {
 
 	public void delete(ContactModel contactModel);
 
-	public ContactModel get(Long id);
+	public ContactModel getById(Long id);
 
 }

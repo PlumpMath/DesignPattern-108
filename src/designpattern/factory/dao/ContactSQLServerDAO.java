@@ -1,6 +1,6 @@
 package designpattern.factory.dao;
 
-class ContactMySQLDAO implements ContactDAO {
+class ContactSQLServerDAO implements ContactDAO {
 
 	@Override
 	public void save(ContactModel contactModel) {

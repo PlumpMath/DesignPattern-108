@@ -1,13 +1,13 @@
 package designpattern.factory.dao;
 
-public class SimpleDatabaseDAOFactory {
+public class SimpleContactDAOFactory {
 
-	public static ContactDAO createDatabaseDAO(String databaseType) {
+	public static ContactDAO createDatabaseDAO(String type) {
 		ContactDAO databaseDAO;
 
-		if (databaseType.equals("Oracle")) {
+		if (type.equals("Oracle")) {
 			databaseDAO = new ContactOracleDAO();
-		} else if (databaseType.equals("MySQL")) {
+		} else if (type.equals("MySQL")) {
 			databaseDAO = new ContactMySQLDAO();
 		} else {
 			databaseDAO = null;

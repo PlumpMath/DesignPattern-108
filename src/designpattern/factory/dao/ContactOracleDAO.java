@@ -13,7 +13,7 @@ class ContactOracleDAO implements ContactDAO {
 	}
 
 	@Override
-	public ContactModel get(Long id) {
+	public ContactModel getById(Long id) {
 		return new ContactModel();
 	}
 
