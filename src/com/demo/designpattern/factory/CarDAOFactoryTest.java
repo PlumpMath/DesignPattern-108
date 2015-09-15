@@ -1,6 +1,7 @@
 package com.demo.designpattern.factory;
 
 import com.demo.car.dao.CarDAO;
+import com.demo.car.dao.CarDAOType;
 import com.demo.car.dao.CarModel;
 import com.demo.car.dao.CarOracleDAOFactocy;
 import com.demo.car.dao.SimpleCarDAOFactory;
@@ -14,8 +15,8 @@ public class CarDAOFactoryTest {
 		carModel.setPlateNumber("AAA1234");
 		carModel.setEngineNumber("BMW1022111151");
 
-		String type = "MySQL";
-		CarDAO simpleCarDAO = SimpleCarDAOFactory.createCarDAO(type);
+		CarDAO simpleCarDAO = SimpleCarDAOFactory
+				.createCarDAO(CarDAOType.CarOracleDAO);
 
 		CarModel dbCarModel = simpleCarDAO.getById(id);
 
@@ -24,10 +25,10 @@ public class CarDAOFactoryTest {
 		}
 
 		CarOracleDAOFactocy carOracleDAOFactocy = new CarOracleDAOFactocy();
-		CarDAO contactDAO = carOracleDAOFactocy.createCarDAO();
+		CarDAO carDAO = carOracleDAOFactocy.createCarDAO();
 
-		contactDAO.save(carModel);
-		contactDAO.delete(carModel);
+		carDAO.save(carModel);
+		carDAO.delete(carModel);
 	}
 
 }
