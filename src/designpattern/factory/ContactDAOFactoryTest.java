@@ -1,9 +1,9 @@
 package designpattern.factory;
 
-import designpattern.factory.dao.ContactDAO;
-import designpattern.factory.dao.ContactModel;
-import designpattern.factory.dao.ContactOracleDAOFactocy;
-import designpattern.factory.dao.SimpleContactDAOFactory;
+import designpattern.dao.ContactDAO;
+import designpattern.dao.ContactModel;
+import designpattern.dao.ContactOracleDAOFactocy;
+import designpattern.dao.SimpleContactDAOFactory;
 
 public class ContactDAOFactoryTest {
 
@@ -30,7 +30,6 @@ public class ContactDAOFactoryTest {
 
 		contactDAO.save(contactModel);
 		contactDAO.delete(contactModel);
-
 	}
 
 }
