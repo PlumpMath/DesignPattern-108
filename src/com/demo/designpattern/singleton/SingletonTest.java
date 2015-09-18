@@ -3,12 +3,18 @@ package com.demo.designpattern.singleton;
 public class SingletonTest {
 
 	public static void main(String[] args) {
-//		Singleton singleton = new Singleton();
-		Singleton singleton = Singleton.getInstance();
-		Singleton1 singleton1 = Singleton1.getInstance();
-		Singleton2 singleton2 = Singleton2.getInstance();
-		Singleton3 singleton3 = Singleton3.getInstance();
-		//....
+//		PageCounter1 pageCounter1 = new PageCounter1();
+
+		PageCounter1 pageCounter1 = PageCounter1.getInstance();
+		PageCounter2 pageCounter2 = PageCounter2.getInstance();
+		PageCounter3 pageCounter3 = PageCounter3.getInstance();
+		PageCounter4 pageCounter4 = PageCounter4.getInstance();
+
+		PageCounter pageCounter = PageCounter.getInstance();
+		pageCounter.add();
+		long count = pageCounter.get();
+		
+		// ...
 	}
 
 }

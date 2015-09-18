@@ -12,6 +12,10 @@ class AmdComputer extends AbstractComputer {
 
 	@Override
 	public void start() {
+		Mainboard mainboard = getMainboard();
+		mainboard.installCpu();
+		Cpu cpu = getCpu();
+		cpu.calculate();
 		// ...
 	}
 
