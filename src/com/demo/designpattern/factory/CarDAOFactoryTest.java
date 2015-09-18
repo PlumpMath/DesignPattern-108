@@ -1,7 +1,7 @@
 package com.demo.designpattern.factory;
 
 import com.demo.car.dao.CarDAO;
-import com.demo.car.dao.CarDAOType;
+import com.demo.car.dao.DatabaseType;
 import com.demo.car.dao.CarModel;
 import com.demo.car.dao.CarOracleDAOFactocy;
 import com.demo.car.dao.SimpleCarDAOFactory;
@@ -16,7 +16,7 @@ public class CarDAOFactoryTest {
 		carModel.setEngineNumber("BMW1022111151");
 
 		CarDAO simpleCarDAO = SimpleCarDAOFactory
-				.createCarDAO(CarDAOType.CarOracleDAO);
+				.createCarDAO(DatabaseType.Oracle);
 
 		CarModel dbCarModel = simpleCarDAO.getById(id);
 

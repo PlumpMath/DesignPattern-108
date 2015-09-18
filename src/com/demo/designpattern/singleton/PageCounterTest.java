@@ -1,6 +1,6 @@
 package com.demo.designpattern.singleton;
 
-public class SingletonTest {
+public class PageCounterTest {
 
 	public static void main(String[] args) {
 //		PageCounter1 pageCounter1 = new PageCounter1();

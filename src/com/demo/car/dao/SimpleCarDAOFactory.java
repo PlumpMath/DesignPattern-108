@@ -2,12 +2,12 @@ package com.demo.car.dao;
 
 public class SimpleCarDAOFactory {
 
-	public static CarDAO createCarDAO(CarDAOType carDAOType) {
+	public static CarDAO createCarDAO(DatabaseType databaseType) {
 		CarDAO carDAO;
 
-		if (CarDAOType.CarOracleDAO == carDAOType) {
+		if (DatabaseType.Oracle == databaseType) {
 			carDAO = new CarOracleDAO();
-		} else if (CarDAOType.CarMySQLDAO == carDAOType) {
+		} else if (DatabaseType.MySQL == databaseType) {
 			carDAO = new CarMySQLDAO();
 		} else {
 			carDAO = null;
