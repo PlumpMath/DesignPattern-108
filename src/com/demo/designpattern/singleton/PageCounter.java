@@ -15,7 +15,8 @@ public class PageCounter {
 	}
 
 	public synchronized long add() {
-		return count = count + 1;
+		count = count + 1;
+		return count;
 	}
 
 	public long get() {
