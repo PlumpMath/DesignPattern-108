@@ -19,6 +19,14 @@ public class PageCounter {
 		return count;
 	}
 
+	public long add(long number) {
+		synchronized (PageCounter.class) {
+			count = count + number;
+		}
+
+		return count;
+	}
+
 	public long get() {
 		return count;
 	}
