@@ -8,6 +8,16 @@ public abstract class AbstractCarBuilder implements CarBuilder {
 
 	private Wheel wheel;
 
+	public AbstractCarBuilder() {
+
+	}
+
+	public AbstractCarBuilder(Engine engine, Underpan underpan, Wheel wheel) {
+		this.engine = engine;
+		this.underpan = underpan;
+		this.wheel = wheel;
+	}
+
 	@Override
 	public void setEngine(Engine engine) {
 		this.engine = engine;

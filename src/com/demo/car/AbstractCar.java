@@ -8,6 +8,10 @@ public abstract class AbstractCar implements Car {
 
 	private Wheel wheel;
 
+	protected AbstractCar() {
+
+	}
+
 	protected AbstractCar(Engine engine, Underpan underpan, Wheel wheel) {
 		this.engine = engine;
 		this.underpan = underpan;
