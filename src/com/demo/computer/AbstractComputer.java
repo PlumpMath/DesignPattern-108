@@ -7,7 +7,6 @@ public abstract class AbstractComputer implements Computer {
 	private Mainboard mainboard;
 
 	protected AbstractComputer(Cpu cpu, Mainboard mainboard) {
-		super();
 		this.cpu = cpu;
 		this.mainboard = mainboard;
 	}
